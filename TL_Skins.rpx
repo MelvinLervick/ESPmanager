@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3" PrintWidth="10800" DocumentName="ActiveReports Document" ScriptLang="C#" ShowParamUI="0" CodeFile="TL_Skins.cs">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; font-variant: inherit; font-weight: normal; font-size: 10pt; font-size-adjust: inherit; font-stretch: inherit; color: rgb(0,0,0); background-repeat: inherit; background-attachment: inherit; opacity: inherit; word-spacing: inherit; letter-spacing: inherit; text-decoration: none; vertical-align: inherit; text-transform: inherit; text-align: inherit; text-indent: inherit; unicode-bidi: inherit; line-height: inherit; white-space: inherit; ddo-char-set: 0; " />
+    <Style Name="Heading1" Value="font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; font-size: 16pt; font-size-adjust: inherit; font-stretch: inherit; " />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-style: italic; font-variant: inherit; font-weight: bold; font-size: 14pt; font-size-adjust: inherit; font-stretch: inherit; " />
+    <Style Name="Heading3" Value="font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; font-size: 13pt; font-size-adjust: inherit; font-stretch: inherit; " />
+  </StyleSheet>
+  <Sections>
+    <Section Type="ReportHeader" Name="ReportHeader" Height="0" BackColor="16777215" CanShrink="0" />
+    <Section Type="PageHeader" Name="PageHeader" Height="1755" BackColor="16777215" CanShrink="0">
+      <Control Type="AR.Field" Name="txtTournamentName" MOD="4" Left="2160" Top="0" Width="6480" Height="450" Text="" Style="text-align: center; font-weight: bold; font-size: 14pt; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="lblSkins" MOD="4" Left="2160" Top="450" Width="6480" Height="360" Caption="Individual SKINS Tournament" Style="text-align: center; font-weight: bold; font-size: 12pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="txtDate" MOD="4" Left="2160" Top="810" Width="6480" Height="360" Text="" Style="text-align: center; font-weight: bold; font-size: 12pt; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="lblPlayerHeader" MOD="4" Left="0" Top="1350" Width="2340" Height="360" Caption="Player Initials" Style="text-align: center; font-weight: bold; vertical-align: bottom; " />
+      <Control Type="AR.Label" Name="lblTeeTimes" MOD="4" Left="2430" Top="1170" Width="900" Height="540" Caption="Tee Time" Style="text-align: center; font-weight: bold; vertical-align: bottom; " />
+      <Control Type="AR.Label" Name="lblTee1" MOD="4" Left="3420" Top="1350" Width="360" Height="360" Caption="1" Style="text-align: center; font-weight: bold; vertical-align: bottom; " />
+      <Control Type="AR.Label" Name="lblTee2" MOD="4" Left="3780" Top="1350" Width="360" Height="360" Caption="2" Style="text-align: center; font-weight: bold; vertical-align: bottom; " />
+      <Control Type="AR.Label" Name="lblTee3" MOD="4" Left="4140" Top="1350" Width="360" Height="360" Caption="3" Style="text-align: center; font-weight: bold; vertical-align: bottom; " />
+      <Control Type="AR.Label" Name="lblTee4" MOD="4" Left="4500" Top="1350" Width="360" Height="360" Caption="4" Style="text-align: center; font-weight: bold; vertical-align: bottom; " />
+      <Control Type="AR.Label" Name="lblTee5" MOD="4" Left="4860" Top="1350" Width="360" Height="360" Caption="5" Style="text-align: center; font-weight: bold; vertical-align: bottom; " />
+      <Control Type="AR.Label" Name="lblTee6" MOD="4" Left="5220" Top="1350" Width="360" Height="360" Caption="6" Style="text-align: center; font-weight: bold; vertical-align: bottom; " />
+      <Control Type="AR.Label" Name="lblTee7" MOD="4" Left="5580" Top="1350" Width="360" Height="360" Caption="7" Style="text-align: center; font-weight: bold; vertical-align: bottom; " />
+      <Control Type="AR.Label" Name="Label4" MOD="4" Left="5940" Top="1350" Width="360" Height="360" Caption="8" Style="text-align: center; font-weight: bold; vertical-align: bottom; " />
+      <Control Type="AR.Label" Name="Label5" MOD="4" Left="6300" Top="1350" Width="360" Height="360" Caption="9" Style="text-align: center; font-weight: bold; vertical-align: bottom; " />
+      <Control Type="AR.Label" Name="Label6" MOD="4" Left="6660" Top="1350" Width="360" Height="360" Caption="10" Style="text-align: center; font-weight: bold; vertical-align: bottom; " />
+      <Control Type="AR.Label" Name="Label7" MOD="4" Left="7020" Top="1350" Width="360" Height="360" Caption="11" Style="text-align: center; font-weight: bold; vertical-align: bottom; " />
+      <Control Type="AR.Label" Name="Label8" MOD="4" Left="7380" Top="1350" Width="360" Height="360" Caption="12" Style="text-align: center; font-weight: bold; vertical-align: bottom; " />
+      <Control Type="AR.Label" Name="Label9" MOD="4" Left="7740" Top="1350" Width="360" Height="360" Caption="13" Style="text-align: center; font-weight: bold; vertical-align: bottom; " />
+      <Control Type="AR.Label" Name="Label10" MOD="4" Left="8100" Top="1350" Width="360" Height="360" Caption="14" Style="text-align: center; font-weight: bold; vertical-align: bottom; " />
+      <Control Type="AR.Label" Name="Label11" MOD="4" Left="8460" Top="1350" Width="360" Height="360" Caption="15" Style="text-align: center; font-weight: bold; vertical-align: bottom; " />
+      <Control Type="AR.Label" Name="Label12" MOD="4" Left="8820" Top="1350" Width="360" Height="360" Caption="16" Style="text-align: center; font-weight: bold; vertical-align: bottom; " />
+      <Control Type="AR.Label" Name="lblWon" MOD="4" Left="9990" Top="1350" Width="792" Height="360" Caption="Won" Style="text-align: center; font-weight: bold; vertical-align: bottom; " />
+      <Control Type="AR.Label" Name="Label13" MOD="4" Left="9180" Top="1350" Width="360" Height="360" Caption="17" Style="text-align: center; font-weight: bold; vertical-align: bottom; " />
+      <Control Type="AR.Label" Name="Label14" MOD="4" Left="9540" Top="1350" Width="360" Height="360" Caption="18" Style="text-align: center; font-weight: bold; vertical-align: bottom; " />
+      <Control Type="AR.Line" Name="Line1" MOD="4" X1="72" Y1="1170" X2="10656" Y2="1170.72" />
+      <Control Type="AR.Line" Name="Line2" MOD="4" X1="72" Y1="1710" X2="10656" Y2="1710.72" />
+      <Control Type="AR.Line" Name="Line3" MOD="4" X1="72" Y1="1740" X2="10656" Y2="1740.72" />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="1275" BackColor="16777215" CanShrink="1">
+      <Control Type="AR.Field" Name="txtInitials" MOD="4" Left="0" Top="0" Width="2340" Height="288" Text="" Style="vertical-align: middle; " />
+      <Control Type="AR.Field" Name="txtTeeTime" MOD="4" Left="2430" Top="0" Width="900" Height="288" Text="" Style="text-align: center; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="txtTee1" MOD="4" Left="3435" Top="0" Width="360" Height="288" Text="" Style="text-align: center; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="txtTee2" MOD="4" Left="3780" Top="0" Width="360" Height="288" Text="" Style="text-align: center; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="txtTee3" MOD="4" Left="4140" Top="0" Width="360" Height="288" Text="" Style="text-align: center; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="txtTee4" MOD="4" Left="4500" Top="0" Width="360" Height="288" Text="" Style="text-align: center; vertical-align: middle; " />
+      <Control Type="AR.Line" Name="lineDetail" MOD="4" X1="90" Y1="270" X2="10674" Y2="270.7199" />
+      <Control Type="AR.CheckBox" Name="cbTeeX1" Visible="0" MOD="4" Left="3420" Top="810" Width="270" Height="270" Caption="" />
+      <Control Type="AR.Shape" Name="boxTee1" MOD="4" Left="3420" Top="450" Width="360" Height="270" BackColor="16777215" />
+      <Control Type="AR.Line" Name="lineTee1a" MOD="4" X1="3420" Y1="450" X2="3776.4" Y2="720" />
+      <Control Type="AR.Line" Name="lineTee1b" MOD="4" X1="3420" Y1="720" X2="3780" Y2="450" />
+      <Control Type="AR.Field" Name="txtTeamID" Visible="0" MOD="4" Left="90" Top="450" Width="810" Height="288" Text="" Style="vertical-align: middle; " />
+      <Control Type="AR.Field" Name="txtTee5" MOD="4" Left="4860" Top="0" Width="360" Height="288" Text="" Style="text-align: center; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="txtTee6" MOD="4" Left="5220" Top="0" Width="360" Height="288" Text="" Style="text-align: center; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="txtTee7" MOD="4" Left="5580" Top="0" Width="360" Height="288" Text="" Style="text-align: center; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="txtTee8" MOD="4" Left="5940" Top="0" Width="360" Height="288" Text="" Style="text-align: center; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="txtTee9" MOD="4" Left="6300" Top="0" Width="360" Height="288" Text="" Style="text-align: center; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="txtTee10" MOD="4" Left="6660" Top="0" Width="360" Height="288" Text="" Style="text-align: center; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="txtTee11" MOD="4" Left="7020" Top="0" Width="360" Height="288" Text="" Style="text-align: center; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="txtTee12" MOD="4" Left="7380" Top="0" Width="360" Height="288" Text="" Style="text-align: center; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="txtTee13" MOD="4" Left="7740" Top="0" Width="360" Height="288" Text="" Style="text-align: center; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="txtTee14" MOD="4" Left="8100" Top="0" Width="360" Height="288" Text="" Style="text-align: center; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="txtTee15" MOD="4" Left="8460" Top="0" Width="360" Height="288" Text="" Style="text-align: center; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="txtTee16" MOD="4" Left="8820" Top="0" Width="360" Height="288" Text="" Style="text-align: center; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="txtTee17" MOD="4" Left="9180" Top="0" Width="360" Height="288" Text="" Style="text-align: center; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="txtTee18" MOD="4" Left="9540" Top="0" Width="360" Height="288" Text="" Style="text-align: center; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="txtWon" MOD="4" Left="9990" Top="0" Width="810" Height="288" Text="" Style="text-align: center; font-weight: bold; font-size: 12pt; vertical-align: middle; " />
+      <Control Type="AR.CheckBox" Name="cbTeeX2" Visible="0" MOD="4" Left="3780" Top="810" Width="270" Height="270" Caption="" />
+      <Control Type="AR.CheckBox" Name="cbTeeX3" Visible="0" MOD="4" Left="4140" Top="810" Width="270" Height="270" Caption="" />
+      <Control Type="AR.CheckBox" Name="cbTeeX4" Visible="0" MOD="4" Left="4500" Top="810" Width="270" Height="270" Caption="" />
+      <Control Type="AR.CheckBox" Name="cbTeeX6" Visible="0" MOD="4" Left="5220" Top="810" Width="270" Height="270" Caption="" />
+      <Control Type="AR.CheckBox" Name="cbTeeX5" Visible="0" MOD="4" Left="4860" Top="810" Width="270" Height="270" Caption="" />
+      <Control Type="AR.CheckBox" Name="cbTeeX8" Visible="0" MOD="4" Left="5940" Top="810" Width="270" Height="270" Caption="" />
+      <Control Type="AR.CheckBox" Name="cbTeeX7" Visible="0" MOD="4" Left="5580" Top="810" Width="270" Height="270" Caption="" />
+      <Control Type="AR.CheckBox" Name="cbTeeX10" Visible="0" MOD="4" Left="6660" Top="810" Width="270" Height="270" Caption="" />
+      <Control Type="AR.CheckBox" Name="cbTeeX9" Visible="0" MOD="4" Left="6300" Top="810" Width="270" Height="270" Caption="" />
+      <Control Type="AR.CheckBox" Name="cbTeeX12" Visible="0" MOD="4" Left="7380" Top="810" Width="270" Height="270" Caption="" />
+      <Control Type="AR.CheckBox" Name="cbTeeX11" Visible="0" MOD="4" Left="7020" Top="810" Width="270" Height="270" Caption="" />
+      <Control Type="AR.CheckBox" Name="cbTeeX14" Visible="0" MOD="4" Left="8100" Top="810" Width="270" Height="270" Caption="" />
+      <Control Type="AR.CheckBox" Name="cbTeeX13" Visible="0" MOD="4" Left="7740" Top="810" Width="270" Height="270" Caption="" />
+      <Control Type="AR.CheckBox" Name="cbTeeX16" Visible="0" MOD="4" Left="8820" Top="810" Width="270" Height="270" Caption="" />
+      <Control Type="AR.CheckBox" Name="cbTeeX15" Visible="0" MOD="4" Left="8460" Top="810" Width="270" Height="270" Caption="" />
+      <Control Type="AR.CheckBox" Name="cbTeeX18" Visible="0" MOD="4" Left="9540" Top="810" Width="270" Height="270" Caption="" />
+      <Control Type="AR.CheckBox" Name="cbTeeX17" Visible="0" MOD="4" Left="9180" Top="810" Width="270" Height="270" Caption="" />
+      <Control Type="AR.Shape" Name="boxTee2" MOD="4" Left="3780" Top="450" Width="360" Height="270" BackColor="16777215" />
+      <Control Type="AR.Line" Name="lineTee2a" MOD="4" X1="3780" Y1="450" X2="4136.4" Y2="720" />
+      <Control Type="AR.Line" Name="lineTee2b" MOD="4" X1="3780" Y1="720" X2="4140" Y2="450" />
+      <Control Type="AR.Shape" Name="boxTee3" MOD="4" Left="4140" Top="450" Width="360" Height="270" BackColor="16777215" />
+      <Control Type="AR.Line" Name="lineTee3a" MOD="4" X1="4140" Y1="450" X2="4496.4" Y2="720" />
+      <Control Type="AR.Line" Name="lineTee3b" MOD="4" X1="4140" Y1="720" X2="4500" Y2="450" />
+      <Control Type="AR.Shape" Name="boxTee4" MOD="4" Left="4500" Top="450" Width="360" Height="270" BackColor="16777215" />
+      <Control Type="AR.Line" Name="lineTee4a" MOD="4" X1="4500" Y1="450" X2="4856.4" Y2="720" />
+      <Control Type="AR.Line" Name="lineTee4b" MOD="4" X1="4500" Y1="720" X2="4860" Y2="450" />
+      <Control Type="AR.Shape" Name="boxTee5" MOD="4" Left="4860" Top="450" Width="360" Height="270" BackColor="16777215" />
+      <Control Type="AR.Line" Name="lineTee5a" MOD="4" X1="4860" Y1="450" X2="5216.4" Y2="720" />
+      <Control Type="AR.Line" Name="lineTee5b" MOD="4" X1="4860" Y1="720" X2="5220" Y2="450" />
+      <Control Type="AR.Shape" Name="boxTee6" MOD="4" Left="5220" Top="450" Width="360" Height="270" BackColor="16777215" />
+      <Control Type="AR.Line" Name="lineTee6a" MOD="4" X1="5220" Y1="450" X2="5576.4" Y2="720" />
+      <Control Type="AR.Line" Name="lineTee6b" MOD="4" X1="5220" Y1="720" X2="5580" Y2="450" />
+      <Control Type="AR.Shape" Name="boxTee7" MOD="4" Left="5580" Top="450" Width="360" Height="270" BackColor="16777215" />
+      <Control Type="AR.Line" Name="lineTee7a" MOD="4" X1="5580" Y1="450" X2="5936.4" Y2="720" />
+      <Control Type="AR.Line" Name="lineTee7b" MOD="4" X1="5580" Y1="720" X2="5940" Y2="450" />
+      <Control Type="AR.Shape" Name="boxTee8" MOD="4" Left="5940" Top="450" Width="360" Height="270" BackColor="16777215" />
+      <Control Type="AR.Line" Name="lineTee8a" MOD="4" X1="5940" Y1="450" X2="6296.4" Y2="720" />
+      <Control Type="AR.Line" Name="lineTee8b" MOD="4" X1="5940" Y1="720" X2="6300" Y2="450" />
+      <Control Type="AR.Shape" Name="boxTee9" MOD="4" Left="6300" Top="450" Width="360" Height="270" BackColor="16777215" />
+      <Control Type="AR.Line" Name="lineTee9a" MOD="4" X1="6300" Y1="450" X2="6656.4" Y2="720" />
+      <Control Type="AR.Line" Name="lineTee9b" MOD="4" X1="6300" Y1="720" X2="6660" Y2="450" />
+      <Control Type="AR.Shape" Name="boxTee10" MOD="4" Left="6660" Top="450" Width="360" Height="270" BackColor="16777215" />
+      <Control Type="AR.Line" Name="lineTee10a" MOD="4" X1="6660" Y1="450" X2="7016.4" Y2="720" />
+      <Control Type="AR.Line" Name="lineTee10b" MOD="4" X1="6660" Y1="720" X2="7020" Y2="450" />
+      <Control Type="AR.Shape" Name="boxTee11" MOD="4" Left="7020" Top="450" Width="360" Height="270" BackColor="16777215" />
+      <Control Type="AR.Line" Name="lineTee11a" MOD="4" X1="7020" Y1="450" X2="7376.4" Y2="720" />
+      <Control Type="AR.Line" Name="lineTee11b" MOD="4" X1="7020" Y1="720" X2="7380" Y2="450" />
+      <Control Type="AR.Shape" Name="boxTee12" MOD="4" Left="7380" Top="450" Width="360" Height="270" BackColor="16777215" />
+      <Control Type="AR.Line" Name="lineTee12a" MOD="4" X1="7380" Y1="450" X2="7736.4" Y2="720" />
+      <Control Type="AR.Line" Name="lineTee12b" MOD="4" X1="7380" Y1="720" X2="7740" Y2="450" />
+      <Control Type="AR.Shape" Name="boxTee13" MOD="4" Left="7740" Top="450" Width="360" Height="270" BackColor="16777215" />
+      <Control Type="AR.Line" Name="lineTee13a" MOD="4" X1="7740" Y1="450" X2="8096.4" Y2="720" />
+      <Control Type="AR.Line" Name="lineTee13b" MOD="4" X1="7740" Y1="720" X2="8100" Y2="450" />
+      <Control Type="AR.Shape" Name="boxTee14" MOD="4" Left="8100" Top="450" Width="360" Height="270" BackColor="16777215" />
+      <Control Type="AR.Line" Name="lineTee14a" MOD="4" X1="8100" Y1="450" X2="8456.4" Y2="720" />
+      <Control Type="AR.Line" Name="lineTee14b" MOD="4" X1="8100" Y1="720" X2="8460" Y2="450" />
+      <Control Type="AR.Shape" Name="boxTee15" MOD="4" Left="8460" Top="450" Width="360" Height="270" BackColor="16777215" />
+      <Control Type="AR.Line" Name="lineTee15a" MOD="4" X1="8460" Y1="450" X2="8816.4" Y2="720" />
+      <Control Type="AR.Line" Name="lineTee15b" MOD="4" X1="8460" Y1="720" X2="8820" Y2="450" />
+      <Control Type="AR.Shape" Name="boxTee16" MOD="4" Left="8820" Top="450" Width="360" Height="270" BackColor="16777215" />
+      <Control Type="AR.Line" Name="lineTee16a" MOD="4" X1="8820" Y1="450" X2="9176.4" Y2="720" />
+      <Control Type="AR.Line" Name="lineTee16b" MOD="4" X1="8820" Y1="720" X2="9180" Y2="450" />
+      <Control Type="AR.Shape" Name="boxTee17" MOD="4" Left="9180" Top="450" Width="360" Height="270" BackColor="16777215" />
+      <Control Type="AR.Line" Name="lineTee17a" MOD="4" X1="9180" Y1="450" X2="9536.4" Y2="720" />
+      <Control Type="AR.Line" Name="lineTee17b" MOD="4" X1="9180" Y1="720" X2="9540" Y2="450" />
+      <Control Type="AR.Shape" Name="boxTee18" MOD="4" Left="9540" Top="450" Width="360" Height="270" BackColor="16777215" />
+      <Control Type="AR.Line" Name="lineTee18a" MOD="4" X1="9540" Y1="450" X2="9896.4" Y2="720" />
+      <Control Type="AR.Line" Name="lineTee18b" MOD="4" X1="9540" Y1="720" X2="9900" Y2="450" />
+    </Section>
+    <Section Type="PageFooter" Name="PageFooter" Height="360" BackColor="16777215" CanShrink="0" />
+    <Section Type="ReportFooter" Name="ReportFooter" Height="360" BackColor="16777215" CanShrink="0" />
+  </Sections>
+  <PageSettings LeftMargin="720" RightMargin="720" TopMargin="720" BottomMargin="720" Orientation="1" />
+</ActiveReportsLayout>

@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>7.0.9466</ProductVersion>
+    <SchemaVersion>1.0</SchemaVersion>
+    <ProjectGuid>{C71DE639-009B-4AE9-A287-9A19B7F47DFA}</ProjectGuid>
+    <SccProjectName>"$/ESPmanager", BAAAAAAA</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName />
+    <AssemblyName>ESPmanager</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ESPmanager</RootNamespace>
+    <StartupObject>ESPmanager.Manager</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+    </COMReference>
+    <ProjectReference Include="..\WindowsControlLibrary1\WindowsControlLibrary1.csproj">
+      <Name>WindowsControlLibrary1</Name>
+      <Project>{3668A582-656E-4123-942D-181EB5D426CD}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CourseSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Database.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DatabaseAccessControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DateSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditScores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ESPtimers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GameMaster.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GameSummary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GolfESPm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherTeeTimesSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintTournamentStandings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ReportSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoundTimes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectPlayersForTeeTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeeTimeSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TenKeyPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TouchMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TourLite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TourLiteCompute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TourLiteDates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TourLiteMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TourLitePost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TourLiteSend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TourLiteTeeTimes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TournamentDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tournaments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utilities.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web References\golfespservice\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WsData\WsCourses.cs" />
+    <Compile Include="WsData\WsTees.cs" />
+    <Content Include="App.ico" />
+    <Content Include="Out.bmp" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\golfespservice\gespws.disco" />
+    <EmbeddedResource Include="CourseSelect.resx">
+      <DependentUpon>CourseSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DateSelect.resx">
+      <DependentUpon>DateSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditScores.resx">
+      <DependentUpon>EditScores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager.resx">
+      <DependentUpon>Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherTeeTimesSelect.resx">
+      <DependentUpon>OtherTeeTimesSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerMaster.resx">
+      <DependentUpon>PlayerMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintTournamentStandings.resx">
+      <DependentUpon>PrintTournamentStandings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportSelect.resx">
+      <DependentUpon>ReportSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoundTimes.resx">
+      <DependentUpon>RoundTimes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectPlayersForTeeTime.resx">
+      <DependentUpon>SelectPlayersForTeeTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeeTimeSelect.resx">
+      <DependentUpon>TeeTimeSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TenKeyPad.resx">
+      <DependentUpon>TenKeyPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TouchMessageBox.resx">
+      <DependentUpon>TouchMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TourLite.resx">
+      <DependentUpon>TourLite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TourLiteDates.resx">
+      <DependentUpon>TourLiteDates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TourLiteMaintenance.resx">
+      <DependentUpon>TourLiteMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TourLitePost.resx">
+      <DependentUpon>TourLitePost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TourLiteSend.resx">
+      <DependentUpon>TourLiteSend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TourLiteTeeTimes.resx">
+      <DependentUpon>TourLiteTeeTimes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TournamentDetails.resx">
+      <DependentUpon>TournamentDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tournaments.resx">
+      <DependentUpon>Tournaments.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Web References\golfespservice\gespws.wsdl" />
+    <None Include="Web References\golfespservice\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:81/gespws.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\golfespservice\</RelPath>
+      <UpdateFromURL>http://localhost:81/gespws.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ESPmanager_golfespservice_gespws</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>
