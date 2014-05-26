@@ -194,7 +194,7 @@ namespace ESPmanager
 			this.btnTeeTimes.Name = "btnTeeTimes";
 			this.btnTeeTimes.Size = new System.Drawing.Size(368, 100);
 			this.btnTeeTimes.TabIndex = 30;
-			this.btnTeeTimes.Text = "&Tee Times";
+			this.btnTeeTimes.Text = "&WsTee Times";
 			this.btnTeeTimes.Click += new System.EventHandler(this.btnTeeTimes_Click);
 			// 
 			// Tournaments

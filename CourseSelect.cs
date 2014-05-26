@@ -108,7 +108,7 @@ namespace ESPmanager
 			this.lblCourseSelected.Name = "lblCourseSelected";
 			this.lblCourseSelected.Size = new System.Drawing.Size(196, 32);
 			this.lblCourseSelected.TabIndex = 3;
-			this.lblCourseSelected.Text = "Course Selected";
+			this.lblCourseSelected.Text = "WsCourse Selected";
 			this.lblCourseSelected.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// lbCourses
@@ -137,7 +137,7 @@ namespace ESPmanager
 			this.MinimizeBox = false;
 			this.Name = "CourseSelect";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "Select Course";
+			this.Text = "Select WsCourse";
 			this.Load += new System.EventHandler(this.CourseSelect_Load);
 			this.ResumeLayout(false);
 

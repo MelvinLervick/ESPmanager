@@ -78,7 +78,7 @@ namespace ESPmanager
 			this.btnSelectCourse.Name = "btnSelectCourse";
 			this.btnSelectCourse.Size = new System.Drawing.Size(924, 88);
 			this.btnSelectCourse.TabIndex = 8;
-			this.btnSelectCourse.Text = "Select Course";
+			this.btnSelectCourse.Text = "Select WsCourse";
 			this.btnSelectCourse.Click += new System.EventHandler(this.btnSelectCourse_Click);
 			// 
 			// btnSelectDate
@@ -102,7 +102,7 @@ namespace ESPmanager
 			this.btnSelectTeeTime.Name = "btnSelectTeeTime";
 			this.btnSelectTeeTime.Size = new System.Drawing.Size(924, 88);
 			this.btnSelectTeeTime.TabIndex = 5;
-			this.btnSelectTeeTime.Text = "Select &Tee Time";
+			this.btnSelectTeeTime.Text = "Select &WsTee Time";
 			this.btnSelectTeeTime.Click += new System.EventHandler(this.btnSelectTeeTime_Click);
 			// 
 			// btnScoreCard
@@ -141,7 +141,7 @@ namespace ESPmanager
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
 			this.Name = "OtherTeeTimesSelect";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Select Tee Time to be Printed.";
+			this.Text = "Select WsTee Time to be Printed.";
 			this.Load += new System.EventHandler(this.OtherTeeTimesSelect_Load);
 			this.Paint += new System.Windows.Forms.PaintEventHandler(this.OtherTeeTimesSelect_Paint);
 			this.ResumeLayout(false);
@@ -185,24 +185,24 @@ namespace ESPmanager
 			// Also verify that AT LEAST one report option was specified.
 			if (espDB.g_State.CourseID == 0)
 			{
-				// A Course must be selected.
+				// A WsCourse must be selected.
 				return;
 			}
 			else
 			{
-				// Course Selected, make sure a Round Date is available for the course
+				// WsCourse Selected, make sure a Round Date is available for the course
 				// and it is selected.
 				if (espDB.g_State.DatePlayed == "")
 				{
-					// Course selected, but no Round Date was specified
+					// WsCourse selected, but no Round Date was specified
 					return;
 				}
 				else
 				{
-					// Course and Date Selected.  Make sure that a Tee Time was also selected.
+					// WsCourse and Date Selected.  Make sure that a WsTee Time was also selected.
 					if (espDB.g_State.TeeTime == "")
 					{
-						// Course selected, Round Date was specified, but no Tee Time
+						// WsCourse selected, Round Date was specified, but no WsTee Time
 						return;
 					}
 				}

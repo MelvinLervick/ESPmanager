@@ -265,7 +265,10 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <Compile Include="WsData\WsCourses.cs" />
+    <Compile Include="WsData\WsPdaDataIn.cs" />
     <Compile Include="WsData\WsTees.cs" />
+    <Compile Include="WsData\WsRounds.cs" />
+    <Compile Include="WsData\WsUnprintedRounds.cs" />
     <Content Include="App.ico" />
     <Content Include="Out.bmp" />
     <None Include="packages.config" />

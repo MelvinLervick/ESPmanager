@@ -1,9 +1,11 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Data.OleDb;
+using System.Linq;
 using ESPmanager.golfespservice;
 using ESPmanager.WsData;
 using Newtonsoft.Json;
@@ -115,6 +117,10 @@ namespace ESPmanager
 
 		public void GetCourseNames()
 		{
+		    List<WsCourse> Courses;
+		    List<WsTees> Tees;
+		    List<WsUnprintedRounds> UnprintedRounds;
+
 			OleDbConnection objConnection = null;
 			OleDbDataAdapter objAdapter = null;
 
@@ -127,9 +133,9 @@ namespace ESPmanager
 			objAdapter = new OleDbDataAdapter(strSQL, objConnection);
 
 			// Fill the datset with a table of CourseNames (subset of Table Courses).
-			objAdapter.Fill( dsGolfESP,"Courses" );
-		    var courses = Service.GetCourses();
-            var results = JsonConvert.DeserializeObject<WsCourses>(courses);
+			//objAdapter.Fill( dsGolfESP,"Courses" );
+		    
+            Courses = JsonConvert.DeserializeObject<WsCourses>(Service.GetCourses()).Courses;
 
 			// UUUUUUUUUUUUUUUUUUUUUUUUUUU
 			// Update "UnprintedRounds" table
@@ -144,37 +150,47 @@ namespace ESPmanager
 			// UUUUUUUUUUUUUUUUUUUUUUUUUUU
 
 			// Set number of Courses, and if only 1 course set the Course ID and Name
-			DataTable tblCourses;
-			DataRow[] rowCourses;
+            //DataTable tblCourses;
+            //DataRow[] rowCourses;
 
-			tblCourses = dsGolfESP.Tables["Courses"];
-			g_State.NumberOfCourses = tblCourses.Rows.Count;
+            //tblCourses = dsGolfESP.Tables["Courses"];
+		    g_State.NumberOfCourses = Courses.Count; //tblCourses.Rows.Count;
 			if (g_State.NumberOfCourses > 0)
 			{
+			    int courseId = 0;
 				if (rowUnprintedRounds.Length > 0)
 				{
 					//g_State.TeeTime = rowRoundTimes[0]["RoundTime"].ToString();
-					rowCourses = tblCourses.Select("CourseID="+rowUnprintedRounds[0]["CourseID"].ToString());
+                    //rowCourses = tblCourses.Select("CourseID="+rowUnprintedRounds[0]["CourseID"].ToString());
+				    courseId = (int) rowUnprintedRounds[0]["CourseID"];
 				}
 				else
 				{
 					if (g_State.NumberOfCourses == 1)
 					{
 						// Only one row
-						rowCourses = tblCourses.Select();
+						//rowCourses = tblCourses.Select();
+					    courseId = Courses[0].CourseId;
 					}
 					else
 					{
-						// More than one row, so set the course to the course designated
+					    // More than one row, so set the course to the course designated
 						// as the PRIMARY course, if there are no unprinted tee time data.
-                        rowCourses = tblCourses.Select("Primary=1");
+                        //rowCourses = tblCourses.Select("Primary=1");
+					    var firstOrDefault = Courses.FirstOrDefault(c => c.Primary == 1);
+					    if ( firstOrDefault != null )
+					        courseId = firstOrDefault.CourseId;
 					}
 				}
-				g_State.CourseID = (int)rowCourses[0]["CourseID"];
-                g_State.CurrentCourseName = rowCourses[0]["Name"].ToString();
-				g_State.ShortCourseName = rowCourses[0]["ShortCourseName"].ToString();
+			    var course = Courses.FirstOrDefault( c => c.CourseId == courseId );
+			    if ( course != null )
+			    {
+			        g_State.CourseID = course.CourseId; //(int)rowCourses[0]["CourseID"];
+			        g_State.CurrentCourseName = course.Name; //rowCourses[0]["Name"].ToString();
+			        g_State.ShortCourseName = course.ShortCourseName; //rowCourses[0]["ShortCourseName"].ToString();
+			    }
 
-				rowUnprintedRounds = null;
+			    rowUnprintedRounds = null;
 				tblUnprintedRounds = null;
 
 				// Update COURSE class data and DATES
@@ -186,8 +202,8 @@ namespace ESPmanager
 				// UpdateRoundTimesTable();
 			}
 
-			rowCourses = null;
-			tblCourses = null;
+			//rowCourses = null;
+			//tblCourses = null;
 
 			// Close the Connection
 			objConnection.Close();
@@ -545,23 +561,25 @@ namespace ESPmanager
 
 		public void UpdateUnprintedRoundsTable()
 		{
+            string strSql = "";
+
+            strSql = @"SELECT *";
+            strSql = strSql + @" FROM PDADataIn";
+            strSql = strSql + @" WHERE ((InDate)>=#" + DateTime.Today.AddDays(-1) + "#)";
+            strSql = strSql + @" ORDER BY InTimeMilitary DESC";
+            List<WsPdaData> pdaDataIn = JsonConvert.DeserializeObject<WsPdaDataIn>(Service.GetPdaDataIn()).PdaDataIn;
+
 			OleDbConnection objConnection = null;
 			OleDbDataAdapter objAdapter = null;
 
 			// Get Connection String
 			string strConnection = GetConnection();
-			string strSQL = "";
-
-			strSQL = @"SELECT *";
-			strSQL = strSQL + @" FROM PDADataIn";
-			strSQL = strSQL + @" WHERE ((InDate)>=#"+DateTime.Today.AddDays(-1)+"#)";
-			strSQL = strSQL + @" ORDER BY InTimeMilitary DESC";
 
 			try
 			{
 				// Open the connection/data adapter
 				objConnection = new OleDbConnection(strConnection);
-				objAdapter = new OleDbDataAdapter(strSQL, objConnection);
+				objAdapter = new OleDbDataAdapter(strSql, objConnection);
 
 				// Fill the datset with a table of RoundDates (subset of Table rounds).
 				// Make sure that the table is empty before updating with new data.

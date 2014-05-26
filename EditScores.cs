@@ -3118,7 +3118,7 @@ namespace ESPmanager
 			this.lblTee.Name = "lblTee";
 			this.lblTee.Size = new System.Drawing.Size(104, 28);
 			this.lblTee.TabIndex = 11;
-			this.lblTee.Text = "Tee";
+			this.lblTee.Text = "WsTee";
 			this.lblTee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// Net1

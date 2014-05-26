@@ -147,7 +147,7 @@ namespace ESPmanager
 			this.lblCourseSelected.Name = "lblCourseSelected";
 			this.lblCourseSelected.Size = new System.Drawing.Size(844, 28);
 			this.lblCourseSelected.TabIndex = 22;
-			this.lblCourseSelected.Text = "Course Selected";
+			this.lblCourseSelected.Text = "WsCourse Selected";
 			this.lblCourseSelected.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// lblCourse
@@ -158,7 +158,7 @@ namespace ESPmanager
 			this.lblCourse.Name = "lblCourse";
 			this.lblCourse.Size = new System.Drawing.Size(116, 28);
 			this.lblCourse.TabIndex = 21;
-			this.lblCourse.Text = "Course:";
+			this.lblCourse.Text = "WsCourse:";
 			this.lblCourse.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// panel1
@@ -233,7 +233,7 @@ namespace ESPmanager
 			lbDates.ValueMember = "rdate";
 			lbDates.DisplayMember = "dispdate";
 
-			// Display Currently Selected Course
+			// Display Currently Selected WsCourse
 			lblCourseSelected.Text = db.g_State.CurrentCourseName;
 
 			monthCalendar1.MaxSelectionCount = 1;

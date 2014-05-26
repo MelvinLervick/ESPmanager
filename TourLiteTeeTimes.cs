@@ -174,7 +174,7 @@ namespace ESPmanager
 			this.dgTeeTimes.BackColor = System.Drawing.Color.FromArgb(((System.Byte)(128)), ((System.Byte)(255)), ((System.Byte)(128)));
 			this.dgTeeTimes.BackgroundColor = System.Drawing.Color.FromArgb(((System.Byte)(128)), ((System.Byte)(255)), ((System.Byte)(128)));
 			this.dgTeeTimes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.dgTeeTimes.CaptionText = "Tee Times";
+			this.dgTeeTimes.CaptionText = "WsTee Times";
 			this.dgTeeTimes.DataMember = "";
 			this.dgTeeTimes.HeaderForeColor = System.Drawing.SystemColors.ControlText;
 			this.dgTeeTimes.Location = new System.Drawing.Point(168, 88);
@@ -191,7 +191,7 @@ namespace ESPmanager
 			this.dgPlayers.BackgroundColor = System.Drawing.Color.FromArgb(((System.Byte)(192)), ((System.Byte)(192)), ((System.Byte)(255)));
 			this.dgPlayers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.dgPlayers.CaptionFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-			this.dgPlayers.CaptionText = "Players Assigned to the Selected Tee Time";
+			this.dgPlayers.CaptionText = "Players Assigned to the Selected WsTee Time";
 			this.dgPlayers.DataMember = "";
 			this.dgPlayers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
 			this.dgPlayers.HeaderFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
@@ -310,7 +310,7 @@ namespace ESPmanager
 			this.gbTeeTimes.Size = new System.Drawing.Size(128, 72);
 			this.gbTeeTimes.TabIndex = 44;
 			this.gbTeeTimes.TabStop = false;
-			this.gbTeeTimes.Text = "Show Tee Times";
+			this.gbTeeTimes.Text = "Show WsTee Times";
 			// 
 			// rbTeeTimesUnassigned
 			// 
@@ -372,7 +372,7 @@ namespace ESPmanager
 			this.btnTeeTimeSelect.Name = "btnTeeTimeSelect";
 			this.btnTeeTimeSelect.Size = new System.Drawing.Size(152, 32);
 			this.btnTeeTimeSelect.TabIndex = 48;
-			this.btnTeeTimeSelect.Text = "Tee Time";
+			this.btnTeeTimeSelect.Text = "WsTee Time";
 			this.btnTeeTimeSelect.Click += new System.EventHandler(this.btnTeeTimeSelect_Click);
 			// 
 			// btnSetUnit
@@ -396,7 +396,7 @@ namespace ESPmanager
 			this.btnSend.Name = "btnSend";
 			this.btnSend.Size = new System.Drawing.Size(128, 52);
 			this.btnSend.TabIndex = 52;
-			this.btnSend.Text = "Send &Tee Time to HH";
+			this.btnSend.Text = "Send &WsTee Time to HH";
 			this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
 			// 
 			// cbSendGames
@@ -431,7 +431,7 @@ namespace ESPmanager
 			this.btnRemoveHH.Name = "btnRemoveHH";
 			this.btnRemoveHH.Size = new System.Drawing.Size(128, 40);
 			this.btnRemoveHH.TabIndex = 55;
-			this.btnRemoveHH.Text = "Remove HH From Tee Time";
+			this.btnRemoveHH.Text = "Remove HH From WsTee Time";
 			this.btnRemoveHH.Click += new System.EventHandler(this.btnRemoveHH_Click);
 			// 
 			// TourLiteTeeTimes
@@ -466,7 +466,7 @@ namespace ESPmanager
 			this.Name = "TourLiteTeeTimes";
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Manage Tournament Tee Times";
+			this.Text = "Manage Tournament WsTee Times";
 			this.Load += new System.EventHandler(this.TourLiteTeeTimes_Load);
 			this.Activated += new System.EventHandler(this.TourLiteTeeTimes_Activated);
 			((System.ComponentModel.ISupportInitialize)(this.dgTeeTimes)).EndInit();
@@ -503,7 +503,7 @@ namespace ESPmanager
 			dgHH.DataSource = dvHH;
 			ConfigureHHGrid();
 			//
-			// Get Tee Times and set up the DataGrid associated with the TeeTimes
+			// Get WsTee Times and set up the DataGrid associated with the TeeTimes
 			espDB.GetRoundTimes(this._TournamentID);
 			dvTeeTimes = new DataView( ds.Tables["RoundTeeTimes"] );
 			dvTeeTimes.AllowNew = false;
@@ -567,7 +567,7 @@ namespace ESPmanager
 			// Add first column style.
 			DataGridTextBoxColumn TextCol1 = new DataGridTextBoxColumn();
 			TextCol1.MappingName = "TeeTime";
-			TextCol1.HeaderText = "Tee Time";
+			TextCol1.HeaderText = "WsTee Time";
 			TextCol1.Width = 100;
 			ts.GridColumnStyles.Add(TextCol1);
 
@@ -663,7 +663,7 @@ namespace ESPmanager
 			// Add column style.
 			TextCol2 = new DataGridTextBoxColumn();
 			TextCol2.MappingName = "TeeName";
-			TextCol2.HeaderText = "Tee";
+			TextCol2.HeaderText = "WsTee";
 			TextCol2.Width = 100;
 			TextCol2.ReadOnly = true;
 			ts.GridColumnStyles.Add(TextCol2);
@@ -907,17 +907,17 @@ namespace ESPmanager
 
 		private void btnDelete_Click(object sender, System.EventArgs e)
 		{
-			// Verify that the Tee Time is to be Deleted
+			// Verify that the WsTee Time is to be Deleted
 			// Verify that the current player is to be deleted
 			TouchMessageBox tmb = new TouchMessageBox();
-			tmb.Header = "Delete the Selected Tee Time";
+			tmb.Header = "Delete the Selected WsTee Time";
 			tmb.Message = "Select DELETE to confirm that you want to delete this TEE TIME.  Select CANCEL to cancel the delete of this TEE TIME.";
 			tmb.Cancel = "&Cancel";
 			tmb.Confirm = "&Delete";
 			tmb.ShowDialog();
 			if (tmb.Return)
 			{
-				// Delete the selected Tee Time
+				// Delete the selected WsTee Time
 				if (dvTeeTimes.Count > 0)
 				{
 					hh.ClearAssignedUnitUsingName(dvTeeTimes[dgTeeTimes.CurrentRowIndex]["HHunit"].ToString());
@@ -1031,14 +1031,14 @@ namespace ESPmanager
 			}
 			else
 			{
-				// No Tee Times
-				MessageBox.Show("There are currently no Tee Times defined.");
+				// No WsTee Times
+				MessageBox.Show("There are currently no WsTee Times defined.");
 				return;
 			}
 			if (dvPlayers.Count == 0)
 			{
-				// No Tee Times
-				MessageBox.Show("There are currently no Players assigned to the Selected Tee Time.");
+				// No WsTee Times
+				MessageBox.Show("There are currently no Players assigned to the Selected WsTee Time.");
 				return;
 			}
 			try
@@ -1058,11 +1058,11 @@ namespace ESPmanager
 					send.ShowDialog();
 				}
 				else
-					MessageBox.Show("A valid HandHeld Unit must first be assigned to the selected Tee Time.");
+					MessageBox.Show("A valid HandHeld Unit must first be assigned to the selected WsTee Time.");
 			}
 			catch
 			{
-				MessageBox.Show("Check to insure that a valid HandHeld unit has been assigned to the selected Tee Time.");
+				MessageBox.Show("Check to insure that a valid HandHeld unit has been assigned to the selected WsTee Time.");
 			}
 			//
 			drv = null;

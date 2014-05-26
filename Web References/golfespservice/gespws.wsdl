@@ -12,6 +12,26 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="GetPdaDataIn">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPdaDataInResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPdaDataInResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRounds">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetRoundsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRoundsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="GetTees">
         <s:complexType />
       </s:element>
@@ -19,6 +39,16 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="GetTeesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnprintedRounds">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetUnprintedRoundsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUnprintedRoundsResult" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -30,11 +60,29 @@
   <wsdl:message name="GetCoursesSoapOut">
     <wsdl:part name="parameters" element="tns:GetCoursesResponse" />
   </wsdl:message>
+  <wsdl:message name="GetPdaDataInSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPdaDataIn" />
+  </wsdl:message>
+  <wsdl:message name="GetPdaDataInSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPdaDataInResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRoundsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRounds" />
+  </wsdl:message>
+  <wsdl:message name="GetRoundsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRoundsResponse" />
+  </wsdl:message>
   <wsdl:message name="GetTeesSoapIn">
     <wsdl:part name="parameters" element="tns:GetTees" />
   </wsdl:message>
   <wsdl:message name="GetTeesSoapOut">
     <wsdl:part name="parameters" element="tns:GetTeesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUnprintedRoundsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUnprintedRounds" />
+  </wsdl:message>
+  <wsdl:message name="GetUnprintedRoundsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUnprintedRoundsResponse" />
   </wsdl:message>
   <wsdl:portType name="gespwsSoap">
     <wsdl:operation name="GetCourses">
@@ -42,10 +90,25 @@
       <wsdl:input message="tns:GetCoursesSoapIn" />
       <wsdl:output message="tns:GetCoursesSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="GetPdaDataIn">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get all PDA Data.</wsdl:documentation>
+      <wsdl:input message="tns:GetPdaDataInSoapIn" />
+      <wsdl:output message="tns:GetPdaDataInSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRounds">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get all Round Data.</wsdl:documentation>
+      <wsdl:input message="tns:GetRoundsSoapIn" />
+      <wsdl:output message="tns:GetRoundsSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="GetTees">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get all course Tees.</wsdl:documentation>
       <wsdl:input message="tns:GetTeesSoapIn" />
       <wsdl:output message="tns:GetTeesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnprintedRounds">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get all Unprinted Round Data.</wsdl:documentation>
+      <wsdl:input message="tns:GetUnprintedRoundsSoapIn" />
+      <wsdl:output message="tns:GetUnprintedRoundsSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="gespwsSoap" type="tns:gespwsSoap">
@@ -59,8 +122,35 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetPdaDataIn">
+      <soap:operation soapAction="http://tempuri.org/GolfEspWS/GetPdaDataIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRounds">
+      <soap:operation soapAction="http://tempuri.org/GolfEspWS/GetRounds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetTees">
       <soap:operation soapAction="http://tempuri.org/GolfEspWS/GetTees" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnprintedRounds">
+      <soap:operation soapAction="http://tempuri.org/GolfEspWS/GetUnprintedRounds" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -80,8 +170,35 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetPdaDataIn">
+      <soap12:operation soapAction="http://tempuri.org/GolfEspWS/GetPdaDataIn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRounds">
+      <soap12:operation soapAction="http://tempuri.org/GolfEspWS/GetRounds" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetTees">
       <soap12:operation soapAction="http://tempuri.org/GolfEspWS/GetTees" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnprintedRounds">
+      <soap12:operation soapAction="http://tempuri.org/GolfEspWS/GetUnprintedRounds" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

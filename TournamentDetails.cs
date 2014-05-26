@@ -578,7 +578,7 @@ namespace ESPmanager
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(236, 32);
 			this.label5.TabIndex = 55;
-			this.label5.Text = "Number of Tee Times";
+			this.label5.Text = "Number of WsTee Times";
 			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// txtTeeTimeSeparation
@@ -599,7 +599,7 @@ namespace ESPmanager
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(238, 32);
 			this.label4.TabIndex = 53;
-			this.label4.Text = "Next Tee Time(6-15)";
+			this.label4.Text = "Next WsTee Time(6-15)";
 			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// txtFirstTeeTime
@@ -620,7 +620,7 @@ namespace ESPmanager
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(196, 32);
 			this.label3.TabIndex = 51;
-			this.label3.Text = "First Tee Time";
+			this.label3.Text = "First WsTee Time";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// txtRoundNumber

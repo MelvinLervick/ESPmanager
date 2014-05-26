@@ -460,7 +460,7 @@ namespace ESPmanager
 			this.lblCourseSelected.Name = "lblCourseSelected";
 			this.lblCourseSelected.Size = new System.Drawing.Size(696, 32);
 			this.lblCourseSelected.TabIndex = 23;
-			this.lblCourseSelected.Text = "Course Selected";
+			this.lblCourseSelected.Text = "WsCourse Selected";
 			this.lblCourseSelected.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// lblTeeTime
@@ -472,7 +472,7 @@ namespace ESPmanager
 			this.lblTeeTime.Name = "lblTeeTime";
 			this.lblTeeTime.Size = new System.Drawing.Size(112, 32);
 			this.lblTeeTime.TabIndex = 22;
-			this.lblTeeTime.Text = "Tee Time:";
+			this.lblTeeTime.Text = "WsTee Time:";
 			this.lblTeeTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// panel1
@@ -629,7 +629,7 @@ namespace ESPmanager
 
 					pd.Print();
 
-					// Set Printed Flag for the Reports associated with the selected Tee Time
+					// Set Printed Flag for the Reports associated with the selected WsTee Time
 					// and remove from the ReportsToBePrinted QUEUE.
 					// Remove TEE Time Entry from DataIn (UnprintedRounds)
 					espDB.DeleteFromUnprintedRoundsMasterTable();
@@ -662,7 +662,7 @@ namespace ESPmanager
 			espDB.LoadRoundAndGameData();
 			//==========================
 
-			// Display Currently Selected Course and Date
+			// Display Currently Selected WsCourse and Date
 			lblCourseSelected.Text = espDB.g_State.CurrentCourseName;
 			lblTeeTimeSelected.Text = espDB.g_State.TeeTime;
 
@@ -1065,7 +1065,7 @@ namespace ESPmanager
 		{
 			// Determine printer order according to the following rules
 			/* Print Header
-			 * Print <Tee Name> <Course Rating> <Length> <MEN>
+			 * Print <WsTee Name> <WsCourse Rating> <Length> <MEN>
 			 *		===================
 			 *		IF all HANDICAPS for all tees are the same for each Hole
 			 *		THEN
@@ -1090,7 +1090,7 @@ namespace ESPmanager
 			 *			c) If the Mens rating and Ladies rating are the same, only print one line per a) and b)
 			 *				else print both ratings.
 			 *		===================
-			 * Print <Tee Name> <Course Rating> <Length> <LADIES>
+			 * Print <WsTee Name> <WsCourse Rating> <Length> <LADIES>
 			 * Print Footer
 			 */
 			// Check for ONE tee
@@ -1111,7 +1111,7 @@ namespace ESPmanager
 				byte multipleHandicap = 0;
 				for (int i=0;i<espDB.cTees.Length;i++)
 				{
-					// Always print each Tee.Length
+					// Always print each WsTee.Length
 					pt[i,0] = true; // Length
 					pt[i,1] = false; // Handicap
 					pt[i,2] = false; // Par

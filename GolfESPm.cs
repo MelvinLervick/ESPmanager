@@ -178,7 +178,7 @@ namespace ESPmanager
 	// change for the tees
 	public class MASTER_COURSE_INFORMATION 
 	{
-		public string CourseName = "Select Course";
+		public string CourseName = "Select WsCourse";
 		public string ShortCourseName = "";
 		public byte NumTees;								// the number of tees this course has
 		public HANDICAP_TYPE DefaultHandicapType;	// default value for home vs. index handicaps
@@ -282,13 +282,13 @@ namespace ESPmanager
 	public class PROGRAM_STATE 
 	{
 		public int			CourseID = 0;							// In APPLIANCE data held in the course structure
-		public int			NumberOfCourses = 0;			// Set when Course Names are retrieved
-		public string		CurrentCourseName = "";		// Set by user or system when Course Names are
+		public int			NumberOfCourses = 0;			// Set when WsCourse Names are retrieved
+		public string		CurrentCourseName = "";		// Set by user or system when WsCourse Names are
 																				// retrieved (if there is only one course defined)
 		public string		ShortCourseName = "";
 		public string		DatePlayed = "01/01/1900";	// Date round was played
 		public string		sDatePlayed = "01/01/1900";	// Date round was played
-		public string		TeeTime = "00:00 AM";			// Tee Time of the round
+		public string		TeeTime = "00:00 AM";			// WsTee Time of the round
 		public byte		StartHole = 0;								// the starting hole number
 		public byte    	NumPlayers = 0;						// the number of players
 		public byte    	NumGames = 0;						// the number of games

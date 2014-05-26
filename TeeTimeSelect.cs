@@ -88,7 +88,7 @@ namespace ESPmanager
 			this.lblTimesInSystem.Name = "lblTimesInSystem";
 			this.lblTimesInSystem.Size = new System.Drawing.Size(349, 28);
 			this.lblTimesInSystem.TabIndex = 15;
-			this.lblTimesInSystem.Text = "Select Tee Time:";
+			this.lblTimesInSystem.Text = "Select WsTee Time:";
 			this.lblTimesInSystem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// lbTeeTimes
@@ -108,7 +108,7 @@ namespace ESPmanager
 			this.lblTeeTimeSelected.Name = "lblTeeTimeSelected";
 			this.lblTeeTimeSelected.Size = new System.Drawing.Size(225, 32);
 			this.lblTeeTimeSelected.TabIndex = 13;
-			this.lblTeeTimeSelected.Text = "Tee Time Selected";
+			this.lblTeeTimeSelected.Text = "WsTee Time Selected";
 			this.lblTeeTimeSelected.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// txtTeeTimeSelected
@@ -149,7 +149,7 @@ namespace ESPmanager
 			this.lblCourse.Name = "lblCourse";
 			this.lblCourse.Size = new System.Drawing.Size(112, 28);
 			this.lblCourse.TabIndex = 16;
-			this.lblCourse.Text = "Course:";
+			this.lblCourse.Text = "WsCourse:";
 			this.lblCourse.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// lblDate
@@ -182,7 +182,7 @@ namespace ESPmanager
 			this.lblCourseSelected.Name = "lblCourseSelected";
 			this.lblCourseSelected.Size = new System.Drawing.Size(508, 28);
 			this.lblCourseSelected.TabIndex = 18;
-			this.lblCourseSelected.Text = "Course Selected";
+			this.lblCourseSelected.Text = "WsCourse Selected";
 			this.lblCourseSelected.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// panel1
@@ -212,7 +212,7 @@ namespace ESPmanager
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Name = "TeeTimeSelect";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "Select Tee Time.";
+			this.Text = "Select WsTee Time.";
 			this.Load += new System.EventHandler(this.TeeTimeSelect_Load);
 			this.ResumeLayout(false);
 
@@ -231,7 +231,7 @@ namespace ESPmanager
 			lbTeeTimes.ValueMember = "RoundTime";
 			lbTeeTimes.DisplayMember = "RoundTime";
 
-			// Display Currently Selected Course and Date
+			// Display Currently Selected WsCourse and Date
 			lblCourseSelected.Text = db.g_State.CurrentCourseName;
 			lblDateSelected.Text = db.g_State.sDatePlayed;
 		}

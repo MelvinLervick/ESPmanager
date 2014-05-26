@@ -211,7 +211,7 @@ namespace ESPmanager
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(124, 32);
 			this.label6.TabIndex = 35;
-			this.label6.Text = "Tee Time:";
+			this.label6.Text = "WsTee Time:";
 			this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// lblRound
@@ -332,7 +332,7 @@ namespace ESPmanager
 			this.lblTee.Name = "lblTee";
 			this.lblTee.Size = new System.Drawing.Size(124, 23);
 			this.lblTee.TabIndex = 44;
-			this.lblTee.Text = "Tee";
+			this.lblTee.Text = "WsTee";
 			this.lblTee.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// dgRoundTimesPlayers
@@ -641,10 +641,10 @@ namespace ESPmanager
 			}
 			if (Byte.Parse(this.txtNoPlayers.Text) < currentPlayerCount)
 			{
-				// Verify that the Tee Time is to be Deleted
+				// Verify that the WsTee Time is to be Deleted
 				// Verify that the current player is to be deleted
 				TouchMessageBox tmb = new TouchMessageBox();
-				tmb.Header = "Remove Players from this Tee Time";
+				tmb.Header = "Remove Players from this WsTee Time";
 				tmb.Message = "Select DELETE to confirm that you want to remove player positions from this TEE TIME.  Select CANCEL to cancel the removal of positions from this TEE TIME.";
 				tmb.Cancel = "&Cancel";
 				tmb.Confirm = "&Delete";

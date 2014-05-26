@@ -196,7 +196,7 @@ namespace ESPmanager
 			this.lblSelectTeeTime.Name = "lblSelectTeeTime";
 			this.lblSelectTeeTime.Size = new System.Drawing.Size(324, 28);
 			this.lblSelectTeeTime.TabIndex = 23;
-			this.lblSelectTeeTime.Text = "Tee Times";
+			this.lblSelectTeeTime.Text = "WsTee Times";
 			this.lblSelectTeeTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// lbTeeTimes
@@ -751,7 +751,7 @@ namespace ESPmanager
 			this.lblCourseSelected.Name = "lblCourseSelected";
 			this.lblCourseSelected.Size = new System.Drawing.Size(560, 28);
 			this.lblCourseSelected.TabIndex = 32;
-			this.lblCourseSelected.Text = "Course Selected";
+			this.lblCourseSelected.Text = "WsCourse Selected";
 			this.lblCourseSelected.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// lblTeeTime
@@ -762,7 +762,7 @@ namespace ESPmanager
 			this.lblTeeTime.Name = "lblTeeTime";
 			this.lblTeeTime.Size = new System.Drawing.Size(112, 28);
 			this.lblTeeTime.TabIndex = 31;
-			this.lblTeeTime.Text = "Tee Time:";
+			this.lblTeeTime.Text = "WsTee Time:";
 			this.lblTeeTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// lblDate
@@ -1030,11 +1030,11 @@ namespace ESPmanager
 			espDB.UnprintedRoundSelect((uint)RoundID);
 			// LOAD the Rounds, Players, Games, and all associated tables
 			espDB.LoadRoundAndGameData();
-			// Update Course Data
+			// Update WsCourse Data
 			espDB.GetCourseData(espDB.g_State.CourseID);
 			espDB.UpdateAllOtherCourseData(espDB.g_State.CourseID);
 			//==========================
-			// Display Currently Selected Course, Date and Time
+			// Display Currently Selected WsCourse, Date and Time
 			lblCourseSelected.Text = espDB.g_State.CurrentCourseName;
 			lblTeeTimeSelected.Text = espDB.g_State.TeeTime;
 			lblDateSelected.Text = espDB.g_State.DatePlayed;
